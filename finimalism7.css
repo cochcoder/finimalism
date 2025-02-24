@@ -20,6 +20,13 @@ html {
 	background-color: #0f031f;
 }
 
+/* Ensure movie options are visible on smaller screens */
+@media screen and (max-width: 768px) {
+  .movie-options {
+    display: block !important;
+  }
+}
+
 .itemsContainer.padded-left {
 	position: top;
 	z-index: 1;
