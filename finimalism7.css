@@ -225,7 +225,8 @@ span.homeLibraryText {
 
 .layout-desktop .detailImageContainer .card,
 .layout-tv .detailImageContainer .card {
-	top: 18vh;
+    top: 18vh;
+    max-width: 100%;
 }
 
 [dir="ltr"] .detailPageContent {
@@ -249,7 +250,9 @@ span.homeLibraryText {
 }
 
 .itemName {
-	margin: .5em 0 !important;
+    margin: .5em 0 !important;
+    width: 100%;
+    word-break: break-word;
 }
 
 .layout-mobile .itemName.infoText.parentNameLast {
@@ -3076,6 +3079,47 @@ button[is="paper-icon-button-light"].cardOverlayButton.cardOverlayButton-hover.i
 		max-height: 10em;
 		min-height: 6em;
   	}
+}
+
+/* Responsive layout adjustments for smaller screens */
+@media (max-width: 1500px) {
+    .layout-desktop [dir="ltr"] .detailPagePrimaryContainer,
+    .layout-tv [dir="ltr"] .detailPagePrimaryContainer {
+        padding-left: 26em;
+    }
+    
+    [dir="ltr"] .detailPageContent {
+        padding-left: 26em;
+    }
+}
+
+/* Additional adjustments for screens like 1366x768 */
+@media (max-width: 1400px) {
+    .layout-desktop [dir="ltr"] .detailPagePrimaryContainer,
+    .layout-tv [dir="ltr"] .detailPagePrimaryContainer {
+        padding-left: 22em;
+    }
+    
+    [dir="ltr"] .detailPageContent {
+        padding-left: 22em;
+    }
+    
+    .layout-desktop .detailImageContainer .card,
+    .layout-tv .detailImageContainer .card {
+        max-width: 95%;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .layout-desktop [dir="ltr"] .detailPagePrimaryContainer,
+    .layout-tv [dir="ltr"] .detailPagePrimaryContainer {
+        padding-left: 20em;
+    }
+    
+    [dir="ltr"] .detailPageContent {
+        padding-left: 20em;
+    }
 }
 
 a[href*="imdb.com"]::before {
