@@ -3522,3 +3522,48 @@ a[href*="shokoanime.com"] {
 	body {
 	}
 }
+
+/* Fix for media options being cut off on 1366x768 resolution */
+@media screen and (max-width: 1366px) {
+    /* Reduce left padding to make room for content */
+    .layout-desktop [dir="ltr"] .detailPagePrimaryContainer,
+    .layout-tv [dir="ltr"] .detailPagePrimaryContainer {
+        padding-left: 24em !important;
+    }
+    
+    [dir="ltr"] .detailPageContent {
+        padding-left: 24em !important;
+    }
+    
+    /* Make sure the poster doesn't overlap content */
+    .layout-desktop .detailImageContainer,
+    .layout-tv .detailImageContainer {
+        max-width: 22em !important;
+    }
+    
+    /* Fix movie title display */
+    .itemName.infoText {
+        word-break: break-word !important;
+    }
+    
+    /* Ensure media selection options are visible */
+    .detailPageSecondaryContainer {
+        overflow: visible !important;
+    }
+    
+    /* Better spacing for media options */
+    .mediaInfoItems {
+        margin-bottom: 1.5em !important;
+    }
+    
+    /* Force proper display of media options */
+    .selectContainer {
+        min-width: 10em !important;
+        max-width: 14em !important;
+    }
+    
+    /* Make text buttons more visible */
+    .detailButton {
+        margin-right: 0.5em !important;
+    }
+}
